@@ -4,7 +4,7 @@ import angular from 'angular';
 import constants from './constants';
 import onConfig  from './on_config';
 import onRun     from './on_run';
-import 'angular-ui-router';
+import 'angular-route';
 import './templates';
 import './filters';
 import './controllers';
@@ -13,7 +13,7 @@ import './directives';
 
 // create and bootstrap application
 const requires = [
-  'ui.router',
+  'ngRoute',
   'templates',
   'app.filters',
   'app.controllers',

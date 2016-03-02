@@ -1,18 +1,14 @@
-function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
+function OnConfig($routeProvider, $locationProvider) {
   'ngInject';
 
   $locationProvider.html5Mode(true);
 
-  $stateProvider
-  .state('Home', {
-    url: '/',
-    controller: 'ExampleCtrl as home',
-    templateUrl: 'home.html',
-    title: 'Home'
-  });
-
-  $urlRouterProvider.otherwise('/');
-
+  $routeProvider
+      .when('/', {
+        controller: 'ExampleCtrl as home',
+        templateUrl: 'home.html'
+      })
+      .otherwise('/');
 }
 
 export default OnConfig;
